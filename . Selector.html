@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<title>CSS Selector Forms Demo</title>
+
+<style>
+  /* i. Simple Selectors */
+
+  /* Element selector - all <p> tags */
+  p {
+    color: navy;
+  }
+
+  /* ID selector - element with id="unique" */
+  #unique {
+    font-weight: bold;
+  }
+
+  /* Class selector - elements with class="highlight" */
+  .highlight {
+    background-color: yellow;
+  }
+
+  /* Group selector - multiple element types */
+  h1, h2 {
+    font-family: Arial, sans-serif;
+  }
+
+  /* Universal selector - all elements */
+  * {
+    margin: 5px;
+  }
+
+
+  /* ii. Combinator selectors */
+
+  /* Descendant selector - <span> inside <div> */
+  div span {
+    color: green;
+  }
+
+  /* Child selector - direct children <li> of <ul> */
+  ul > li {
+    list-style-type: square;
+  }
+
+  /* Adjacent sibling selector - <p> immediately after <h2> */
+  h2 + p {
+    color: red;
+  }
+
+  /* General sibling selector - all <p> siblings after <h2> */
+  h2 ~ p {
+    font-style: italic;
+  }
+
+
+  /* iii. Pseudo-class selector */
+
+  /* Hover on links */
+  a:hover {
+    color: orange;
+    text-decoration: underline;
+  }
+
+  /* First child of its parent */
+  li:first-child {
+    font-weight: bold;
+  }
+
+
+  /* iv. Pseudo-element selector */
+
+  /* Add content before <h1> */
+  h1::before {
+    content: "⭐ ";
+  }
+
+  /* Add content after <p> */
+  p::after {
+    content: " 🔥";
+  }
+
+
+  /* v. Attribute selector */
+
+  /* Select input elements with type="text" */
+  input[type="text"] {
+    border: 2px solid blue;
+    padding: 5px;
+  }
+
+  /* Select links with target="_blank" */
+  a[target="_blank"] {
+    color: purple;
+  }
+</style>
+</head>
+
+<body>
+
+<h1>CSS Selector Forms</h1>
+
+<h2>Simple Selectors</h2>
+<p>This is a simple paragraph.</p>
+<p id="unique">This paragraph has an ID selector.</p>
+<p class="highlight">This paragraph uses a class selector.</p>
+
+<h2>Combinator Selectors</h2>
+<div>
+  <span>This span is inside a div (descendant selector)</span>
+</div>
+<ul>
+  <li>First item (child selector)</li>
+  <li>Second item</li>
+</ul>
+
+<h2>Sibling Selectors</h2>
+<h2>Heading</h2>
+<p>This paragraph is adjacent sibling of h2 (h2 + p).</p>
+<p>This paragraph is general sibling of h2 (h2 ~ p).</p>
+
+<h2>Pseudo-classes</h2>
+<a href="#">Normal Link</a> | 
+<a href="#" target="_blank">Link with target _blank (also attribute selector)</a>
+
+<h2>Pseudo-elements</h2>
+<p>Look for the star before the heading and fire emoji after this paragraph.</p>
+
+<h2>Attribute Selectors</h2>
+<form>
+  <label for="name">Name:</label>
+  <input type="text" id="name" placeholder="Text input" />
+  <br />
+  <label for="email">Email:</label>
+  <input type="email" id="email" placeholder="Email input" />
+</form>
+
+</body>
+</html>
