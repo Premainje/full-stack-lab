@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Voter Eligibility Checker</title>
+  <style>
+    table, th, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      padding: 10px;
+      text-align: center;
+    }
+    table {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h2>Voter Information Form</h2>
+  <button onclick="getVoterInfo()">Enter Voter Info</button>
+
+  <div id="voterResult"></div>
+
+  <script>
+    function getVoterInfo() {
+      let name = prompt("Enter your name:");
+      let ageInput = prompt("Enter your age:");
+
+      // Type conversion
+      let age = parseInt(ageInput);
+
+      // Validation
+      if (!name || isNaN(age) || age < 0) {
+        alert("Invalid input. Please try again.");
+        return;
+      }
+
+      let canVote = age >= 18 ? "Yes" : "No";
+
+      let result = `
+        <table>
+          <tr>
+            <th>Name</th>
+            <th>Age</th>
+            <th>Can Vote?</th>
+          </tr>
+          <tr>
+            <td>${name}</td>
+            <td>${age}</td>
+            <td>${canVote}</td>
+          </tr>
+        </table>
+      `;
+
+      document.getElementById("voterResult").innerHTML = result;
+    }
+  </script>
+</body>
+</html>
