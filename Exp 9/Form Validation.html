@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form Validation</title>
+    <script>
+        function validateForm() {
+            let name = document.getElementById("name").value.trim();
+            let mobile = document.getElementById("mobile").value.trim();
+            let email = document.getElementById("email").value.trim();
+
+            let nameRegex = /^[A-Za-z][A-Za-z0-9]{5,}$/;
+            let mobileRegex = /^[0-9]{10}$/;
+            let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,}$/;
+
+            let errorMsg = "";
+
+            if (!nameRegex.test(name)) {
+                errorMsg += "Invalid Name: Must start with a letter, followed by letters/numbers, min 6 characters.\n";
+            }
+
+            if (!mobileRegex.test(mobile)) {
+                errorMsg += "Invalid Mobile: Must be 10 digits only.\n";
+            }
+
+            if (!emailRegex.test(email)) {
+                errorMsg += "Invalid Email: Must be in the format example@domain.com.\n";
+            }
+
+            if (errorMsg) {
+                alert(errorMsg);
+                return false;
+            } else {
+                alert("All inputs are valid!");
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Registration Form</h2>
+    <form onsubmit="return validateForm();">
+        Name: <input type="text" id="name" required><br><br>
+        Mobile: <input type="text" id="mobile" required><br><br>
+        Email: <input type="text" id="email" required><br><br>
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form Validation</title>
+    <script>
+        function validateForm() {
+            let name = document.getElementById("name").value.trim();
+            let mobile = document.getElementById("mobile").value.trim();
+            let email = document.getElementById("email").value.trim();
+
+            let nameRegex = /^[A-Za-z][A-Za-z0-9]{5,}$/;
+            let mobileRegex = /^[0-9]{10}$/;
+            let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,}$/;
+
+            let errorMsg = "";
+
+            if (!nameRegex.test(name)) {
+                errorMsg += "Invalid Name: Must start with a letter, followed by letters/numbers, min 6 characters.\n";
+            }
+
+            if (!mobileRegex.test(mobile)) {
+                errorMsg += "Invalid Mobile: Must be 10 digits only.\n";
+            }
+
+            if (!emailRegex.test(email)) {
+                errorMsg += "Invalid Email: Must be in the format example@domain.com.\n";
+            }
+
+            if (errorMsg) {
+                alert(errorMsg);
+                return false;
+            } else {
+                alert("All inputs are valid!");
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Registration Form</h2>
+    <form onsubmit="return validateForm();">
+        Name: <input type="text" id="name" required><br><br>
+        Mobile: <input type="text" id="mobile" required><br><br>
+        Email: <input type="text" id="email" required><br><br>
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form Validation</title>
+    <script>
+        function validateForm() {
+            let name = document.getElementById("name").value.trim();
+            let mobile = document.getElementById("mobile").value.trim();
+            let email = document.getElementById("email").value.trim();
+
+            let nameRegex = /^[A-Za-z][A-Za-z0-9]{5,}$/;
+            let mobileRegex = /^[0-9]{10}$/;
+            let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,}$/;
+
+            let errorMsg = "";
+
+            if (!nameRegex.test(name)) {
+                errorMsg += "Invalid Name: Must start with a letter, followed by letters/numbers, min 6 characters.\n";
+            }
+
+            if (!mobileRegex.test(mobile)) {
+                errorMsg += "Invalid Mobile: Must be 10 digits only.\n";
+            }
+
+            if (!emailRegex.test(email)) {
+                errorMsg += "Invalid Email: Must be in the format example@domain.com.\n";
+            }
+
+            if (errorMsg) {
+                alert(errorMsg);
+                return false;
+            } else {
+                alert("All inputs are valid!");
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Registration Form</h2>
+    <form onsubmit="return validateForm();">
+        Name: <input type="text" id="name" required><br><br>
+        Mobile: <input type="text" id="mobile" required><br><br>
+        Email: <input type="text" id="email" required><br><br>
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form Validation</title>
+    <script>
+        function validateForm() {
+            let name = document.getElementById("name").value.trim();
+            let mobile = document.getElementById("mobile").value.trim();
+            let email = document.getElementById("email").value.trim();
+
+            let nameRegex = /^[A-Za-z][A-Za-z0-9]{5,}$/;
+            let mobileRegex = /^[0-9]{10}$/;
+            let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,}$/;
+
+            let errorMsg = "";
+
+            if (!nameRegex.test(name)) {
+                errorMsg += "Invalid Name: Must start with a letter, followed by letters/numbers, min 6 characters.\n";
+            }
+
+            if (!mobileRegex.test(mobile)) {
+                errorMsg += "Invalid Mobile: Must be 10 digits only.\n";
+            }
+
+            if (!emailRegex.test(email)) {
+                errorMsg += "Invalid Email: Must be in the format example@domain.com.\n";
+            }
+
+            if (errorMsg) {
+                alert(errorMsg);
+                return false;
+            } else {
+                alert("All inputs are valid!");
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Registration Form</h2>
+    <form onsubmit="return validateForm();">
+        Name: <input type="text" id="name" required><br><br>
+        Mobile: <input type="text" id="mobile" required><br><br>
+        Email: <input type="text" id="email" required><br><br>
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Registration Form Validation</title>
+    <script>
+        function validateForm() {
+            let name = document.getElementById("name").value.trim();
+            let mobile = document.getElementById("mobile").value.trim();
+            let email = document.getElementById("email").value.trim();
+
+            let nameRegex = /^[A-Za-z][A-Za-z0-9]{5,}$/;
+            let mobileRegex = /^[0-9]{10}$/;
+            let emailRegex = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,}$/;
+
+            let errorMsg = "";
+
+            if (!nameRegex.test(name)) {
+                errorMsg += "Invalid Name: Must start with a letter, followed by letters/numbers, min 6 characters.\n";
+            }
+
+            if (!mobileRegex.test(mobile)) {
+                errorMsg += "Invalid Mobile: Must be 10 digits only.\n";
+            }
+
+            if (!emailRegex.test(email)) {
+                errorMsg += "Invalid Email: Must be in the format example@domain.com.\n";
+            }
+
+            if (errorMsg) {
+                alert(errorMsg);
+                return false;
+            } else {
+                alert("All inputs are valid!");
+                return true;
+            }
+        }
+    </script>
+</head>
+<body>
+    <h2>Registration Form</h2>
+    <form onsubmit="return validateForm();">
+        Name: <input type="text" id="name" required><br><br>
+        Mobile: <input type="text" id="mobile" required><br><br>
+        Email: <input type="text" id="email" required><br><br>
+        <input type="submit" value="Register">
+    </form>
+</body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Number Operations</title>
+    <script>
+        function factorial(n) {
+            let result = 1;
+            for (let i = 1; i <= n; i++) result *= i;
+            return result;
+        }
+
+        function fibonacci(n) {
+            let series = [0, 1];
+            for (let i = 2; i < n; i++) {
+                series.push(series[i - 1] + series[i - 2]);
+            }
+            return series.slice(0, n);
+        }
+
+        function isPrime(num) {
+            if (num < 2) return false;
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) return false;
+            }
+            return true;
+        }
+
+        function primeNumbers(n) {
+            let primes = [];
+            for (let i = 2; i <= n; i++) {
+                if (isPrime(i)) primes.push(i);
+            }
+            return primes;
+        }
+
+        function isPalindrome(num) {
+            let str = num.toString();
+            let reversed = str.split('').reverse().join('');
+            return str === reversed;
+        }
+
+        function handleOperation(operation) {
+            let num = parseInt(document.getElementById("inputNum").value);
+            let output = "";
+
+            if (isNaN(num)) {
+                output = "Please enter a valid number.";
+            } else {
+                switch (operation) {
+                    case 'factorial':
+                        output = "Factorial: " + factorial(num);
+                        break;
+                    case 'fibonacci':
+                        output = "Fibonacci: " + fibonacci(num).join(", ");
+                        break;
+                    case 'prime':
+                        output = "Primes: " + primeNumbers(num).join(", ");
+                        break;
+                    case 'palindrome':
+                        output = num + (isPalindrome(num) ? " is" : " is not") + " a palindrome.";
+                        break;
+                }
+            }
+
+            document.getElementById("result").innerHTML = output;
+        }
+    </script>
+</head>
+<body>
+    <h2>Enter a number:</h2>
+    <input type="number" id="inputNum" placeholder="Enter a number">
+    <br><br>
+    <button onclick="handleOperation('factorial')">Factorial</button>
+    <button onclick="handleOperation('fibonacci')">Fibonacci</button>
+    <button onclick="handleOperation('prime')">Prime</button>
+    <button onclick="handleOperation('palindrome')">Palindrome</button>
+    <br><br>
+    <div id="result" style="font-weight: bold;"></div>
+</body>
+</html>

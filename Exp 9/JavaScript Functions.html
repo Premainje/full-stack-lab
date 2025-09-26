@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Functions Example</title>
+</head>
+<body>
+    <script>
+        function factorial(n) {
+            if (n === 0 || n === 1) return 1;
+            return n * factorial(n - 1);
+        }
+
+        function fibonacci(n) {
+            let series = [0, 1];
+            for (let i = 2; i < n; i++) {
+                series.push(series[i - 1] + series[i - 2]);
+            }
+            return series.slice(0, n);
+        }
+
+        function isPrime(num) {
+            if (num < 2) return false;
+            for (let i = 2; i <= Math.sqrt(num); i++) {
+                if (num % i === 0) return false;
+            }
+            return true;
+        }
+
+        function primeNumbers(n) {
+            let primes = [];
+            for (let i = 2; i <= n; i++) {
+                if (isPrime(i)) primes.push(i);
+            }
+            return primes;
+        }
+
+        function isPalindrome(num) {
+            let str = num.toString();
+            let reversed = str.split('').reverse().join('');
+            return str === reversed;
+        }
+
+        // Testing the functions
+        let num = parseInt(prompt("Enter a number:"));
+        document.write("<h3>Factorial of " + num + ": " + factorial(num) + "</h3>");
+        document.write("<h3>Fibonacci series up to " + num + ": " + fibonacci(num).join(", ") + "</h3>");
+        document.write("<h3>Prime numbers up to " + num + ": " + primeNumbers(num).join(", ") + "</h3>");
+        document.write("<h3>" + num + " is " + (isPalindrome(num) ? "" : "not ") + "a Palindrome</h3>");
+    </script>
+</body>
+</html>
