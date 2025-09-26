@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>RegExp Object Example</title>
+</head>
+<body>
+    <script>
+        let text = "My phone number is 9876543210.";
+        let pattern = /\d{10}/; // Match 10 digit number
+
+        let match = text.match(pattern);
+        document.write("Matched Number: " + (match ? match[0] : "None"));
+    </script>
+</body>
+</html>

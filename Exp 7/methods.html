@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User-defined Object</title>
+</head>
+<body>
+    <script>
+        function Person(name, age) {
+            this.name = name;
+            this.age = age;
+
+            this.greet = function() {
+                return "Hello, my name is " + this.name;
+            };
+
+            // Accessor: Getter for age
+            this.getAge = function() {
+                return this.age;
+            };
+
+            // Accessor: Setter for age
+            this.setAge = function(newAge) {
+                if (newAge > 0) this.age = newAge;
+            };
+        }
+
+        // Create Object
+        let person1 = new Person("Alice", 25);
+
+        // Display
+        document.write(person1.greet() + "<br>");
+        document.write("Age: " + person1.getAge() + "<br>");
+
+        person1.setAge(30);
+        document.write("Updated Age: " + person1.getAge());
+    </script>
+</body>
+</html>

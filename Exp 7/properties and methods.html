@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Document Object Example</title>
+</head>
+<body>
+    <h1 id="heading">Hello, World!</h1>
+    <button onclick="changeContent()">Click to Change Content</button>
+
+    <script>
+        function changeContent() {
+            document.getElementById("heading").innerHTML = "Content Changed!";
+            alert("Document Title: " + document.title);
+            console.log("URL:", document.URL);
+        }
+    </script>
+</body>
+</html>
