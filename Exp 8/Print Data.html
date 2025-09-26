@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Looping Through Object</title>
+</head>
+<body>
+    <script>
+        let person = {
+            name: "Alice",
+            age: 25,
+            city: "New York"
+        };
+
+        document.write("<h3>Using for-in:</h3>");
+        for (let key in person) {
+            document.write(key + ": " + person[key] + "<br>");
+        }
+
+        document.write("<h3>Using forEach on Array:</h3>");
+        let colors = ["Red", "Green", "Blue"];
+        colors.forEach(function(color) {
+            document.write(color + "<br>");
+        });
+
+        document.write("<h3>Using for-of on Array:</h3>");
+        for (let color of colors) {
+            document.write(color + "<br>");
+        }
+    </script>
+</body>
+</html>
